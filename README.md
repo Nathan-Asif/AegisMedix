@@ -1,6 +1,6 @@
 # AegisMedix: The AI Medical Sentinel 🩺🛡️
 
-![AegisMedix Badge](assets/logo-v2.png)
+![AegisMedix Badge](assets/imgs/main_logo.png)
 
 AegisMedix is a state-of-the-art, autonomous medical companion designed to bridge the gap between passive health tracking and proactive healthcare intervention. Powered by the native multimodality of **Gemini 3**, AegisMedix acts as a 24/7 sentinel, monitoring recovery, managing complex medication schedules, and providing real-time visual and audio health consultations.
 
