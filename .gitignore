@@ -1,0 +1,33 @@
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.env
+**/.env
+**/.env.example
+
+# Python
+**/__pycache__/
+**/*.pyc
+**/venv/
+.venv/
+env/
+
+# Node / Frontend
+**/node_modules/
+**/.next/
+**/out/
+**/dist/
+**/build/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Project Specific
+cortex/models_output.txt
+cortex/list_models.py
+cortex/test_*.py
+extract_colors.py

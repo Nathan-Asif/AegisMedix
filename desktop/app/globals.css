@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-primary: #d5c07b;
+  --color-card-dark: #0D1B2A;
+  --color-teal-accent: #2DD4BF;
+  --font-display: 'Space Grotesk', sans-serif;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 100dvh;
+}
+
+/* HUD Scanline effect */
+.hud-scanline {
+  background: linear-gradient(to bottom, transparent 50%, rgba(213, 192, 123, 0.02) 50%);
+  background-size: 100% 4px;
+}
+
+/* Status pulse animation */
+.status-pulse {
+  box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.4);
+  animation: pulse-teal 2s infinite;
+}
+
+@keyframes pulse-teal {
+  0% {
+    box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 6px rgba(45, 212, 191, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(45, 212, 191, 0);
+  }
+}
+
+/* Material Symbols filled style */
+.material-symbols-outlined.filled {
+  font-variation-settings: 'FILL' 1;
+}
+
+/* Custom scrollbar hidden */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom styled scrollbar for dark theme */
+*::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+*::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: #1a1a1a !important;
+  border-radius: 10px !important;
+}
+
+*::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: #2dd4bf !important;
+  border-radius: 10px !important;
+  border: 2px solid #1a1a1a !important;
+}
+
+*::-webkit-scrollbar-thumb:hover,
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background: #5eead4 !important;
+}
+
+*::-webkit-scrollbar-corner {
+  background: #0a0a0a !important;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: #2dd4bf #1a1a1a !important;
+}
+
+/* Cursor pointer for interactive elements */
+button,
+a,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+select,
+label[for],
+nav a,
+nav button,
+header button,
+.cursor-pointer,
+[onclick],
+.material-symbols-outlined {
+  cursor: pointer;
+}
+
+/* Disable pointer on disabled elements */
+button:disabled,
+.disabled {
+  cursor: not-allowed;
+}

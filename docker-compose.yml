@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  cortex:
+    build: ./cortex
+    container_name: aegismedix-cortex
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./cortex:/app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    environment:
+      - PORT=8000
+
+  desktop:
+    image: node:20-alpine
+    container_name: aegismedix-desktop
+    working_dir: /app
+    volumes:
+      - ./desktop:/app
+    ports:
+      - "3000:3000"
+    command: npm run dev
+    # Depends on cortex for backend connectivity later
+    depends_on:
+      - cortex
